@@ -14,20 +14,20 @@ If you are writing a plugin that will use this SDK, it is recommended that you a
 
 ```php
 $plugin->dependencies = array(
-    'local_aws' => 2017030100
+    'local_aliyunoss' => 2021081700
 );
 ```
 
 Also you can use AliyunOSS region admin setting in your plugin like:
 
 ```php
-use local_aws\admin_settings_aws_region;
+use local_aws\admin_settings_aliyunoss_region;
 
 ...
 
-$settings->add(new admin_settings_aws_region('my_plugin/s3_region',
-    new \lang_string('settings:aws:region', 'my_plugin'),
-    new \lang_string('settings:aws:region_help', 'my_plugin'), ''));
+$settings->add(new admin_settings_aliyunoss_region('my_plugin/oss_region',
+    new \lang_string('settings:oss:region', 'my_plugin'),
+    new \lang_string('settings:oss:region_help', 'my_plugin'), ''));
 
 ```
  
@@ -39,15 +39,6 @@ are quite large, but also because it can cause issues with library namespaces an
 
 Plugins that depend on this library are:
 
-https://github.com/catalyst/moodle-local_smartmedia
-
-https://github.com/catalyst/moodle-search_elastic
-
-https://github.com/catalyst/moodle-tool_s3logs
-
-https://github.com/catalyst/moodle-tool_objectfs
-
-
 ## Supported Moodle Versions
 
 This plugin requires Moodle 2.6+
@@ -58,26 +49,6 @@ You can install this plugin from the plugin directory or get the latest version
 on GitHub.
 
 ```bash
-git clone https://github.com/catalyst/moodle-local_aws local/aws
+git clone https://github.com/liaohanzhen/moodle-local_aliyunoss local/aliyunoss
 ```
 
-# Crafted by Catalyst IT
-
-
-This plugin was developed by Catalyst IT Australia:
-
-https://www.catalyst-au.net/
-
-![Catalyst IT](/pix/catalyst-logo.png?raw=true)
-
-
-# Contributing and Support
-
-Issues, and pull requests using github are welcome and encouraged! 
-
-https://github.com/catalyst/moodle-local_aws/issues
-
-If you would like commercial support or would like to sponsor additional improvements
-to this plugin please contact us:
-
-https://www.catalyst-au.net/contact-us
